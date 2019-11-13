@@ -16,7 +16,7 @@
 <script>
 const defaultMenuItems = [{
   title: 'Home',
-  to: '#',
+  to: '/',
 }, {
   title: 'Services',
   to: '#',
@@ -48,7 +48,7 @@ export default {
        */
     copyright: {
       type: String,
-      default: 'Copyright © 2018 DesignRevision',
+      default: 'Made with 💖 by Argonauts',
     },
     /**
        * Whether the footer should be wrapped in a container, or not.

@@ -40,6 +40,11 @@ export default new Router({
       component: AddNewPost,
     },
     {
+      path: '/register-patient',
+      name: 'register-patient',
+      component: AddNewPost,
+    },
+    {
       path: '/errors',
       name: 'errors',
       component: Errors,

@@ -1,11 +1,17 @@
 export default function () {
   return [{
-    title: 'Blog Dashboard',
+    title: 'Dashboard',
     to: {
       name: 'blog-overview',
     },
     htmlBefore: '<i class="material-icons">edit</i>',
     htmlAfter: '',
+  }, {
+    title: 'Register Patient',
+    htmlBefore: '<i class="material-icons">note_add</i>',
+    to: {
+      name: 'register-patient',
+    },
   }, {
     title: 'Blog Posts',
     htmlBefore: '<i class="material-icons">vertical_split</i>',
