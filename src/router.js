@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import PersonalBlog from './views/PersonalBlog.vue';
+import Home from './views/Home.vue';
 import UserProfileLite from './views/UserProfileLite.vue';
 import AddNewPost from './views/AddNewPost.vue';
 import RegisterPatient from './views/RegisterPatient.vue';
@@ -21,6 +22,11 @@ export default new Router({
     return { x: 0, y: 0 };
   },
   routes: [
+    {
+      path: '/home',
+      name: 'home',
+      component: Home,
+    },
     {
       path: '/',
       redirect: '/blog-overview',
