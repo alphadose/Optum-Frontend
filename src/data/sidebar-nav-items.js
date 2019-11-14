@@ -42,11 +42,5 @@ export default function () {
     to: {
       name: 'user-profile-lite',
     },
-  }, {
-    title: 'Errors',
-    htmlBefore: '<i class="material-icons">error</i>',
-    to: {
-      name: 'errors',
-    },
   }];
 }

@@ -16,13 +16,13 @@
                 <!-- First Name -->
                 <d-col md="6" class="form-group">
                   <label for="feFirstName">First Name</label>
-                  <d-form-input type="text" id="feFirstName" placeholder="First Name" value="Sierra" />
+                  <d-form-input type="text" id="feFirstName" placeholder="First Name" value="Anish" />
                 </d-col>
 
                 <!-- Last Name -->
                 <d-col md="6" class="form-group">
                   <label for="feLastName">Last Name</label>
-                  <d-form-input type="text" id="feLastName" placeholder="Last Name" value="Brooks" />
+                  <d-form-input type="text" id="feLastName" placeholder="Last Name" value="Mukherjee" />
                 </d-col>
 
               </d-form-row>
@@ -32,13 +32,13 @@
                 <!-- Email -->
                 <d-col md="6" class="form-group">
                   <label for="feEmail">Email</label>
-                  <d-form-input type="email" id="feEmail" placeholder="Email Address" value="sierra@example.com" />
+                  <d-form-input type="email" id="feEmail" placeholder="Email Address" value="alphadose@gmail.com" />
                 </d-col>
 
                 <!-- Password -->
                 <d-col md="6" class="form-group">
                   <label for="fePassword">Password</label>
-                  <d-form-input type="password" id="fePassword" placeholder="Last Name" value="EX@MPL#P@$$w0RD" />
+                  <d-form-input type="password" id="fePassword" placeholder="Last Name" value="kekw" />
                 </d-col>
 
               </d-form-row>
@@ -46,14 +46,14 @@
               <!-- Address -->
               <div class="form-group">
                 <label for="feInputAddress">Address</label>
-                <d-form-input type="text" id="feInputAddress" placeholder="1234 Main St" />
+                <d-form-input type="text" id="feInputAddress" placeholder="Indian Institute of Technology Roorkee" />
               </div>
 
               <d-form-row>
                 <!-- City -->
                 <d-col md="6" class="form-group">
                   <label for="feInputCity">City</label>
-                  <d-form-input type="text" id="feInputCity" />
+                  <d-form-input type="text" id="feInputCity" value="Roorkee"/>
                 </d-col>
 
                 <!-- State -->

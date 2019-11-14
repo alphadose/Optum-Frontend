@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import PersonalBlog from './views/PersonalBlog.vue';
 import UserProfileLite from './views/UserProfileLite.vue';
 import AddNewPost from './views/AddNewPost.vue';
+import RegisterPatient from './views/RegisterPatient.vue';
 import Errors from './views/Errors.vue';
 import ComponentsOverview from './views/ComponentsOverview.vue';
 import Tables from './views/Tables.vue';
@@ -42,7 +43,7 @@ export default new Router({
     {
       path: '/register-patient',
       name: 'register-patient',
-      component: AddNewPost,
+      component: RegisterPatient,
     },
     {
       path: '/errors',

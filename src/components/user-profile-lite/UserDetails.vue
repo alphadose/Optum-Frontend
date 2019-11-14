@@ -47,11 +47,11 @@
 const defaultUserDetails = {
   name: 'Anish Mukherjee',
   avatar: require('@/assets/images/avatars/profile.jpeg'),
-  jobTitle: 'Project Manager',
+  jobTitle: 'Developer',
   performanceReportTitle: 'Workload',
   performanceReportValue: 74,
   metaTitle: 'Description',
-  metaValue: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae minima obcaecati quod dolorum sint alias, possimus illum assumenda eligendi cumque?',
+  metaValue: 'A wanderer the world of code',
 };
 
 export default {
