@@ -11,7 +11,7 @@
       <d-row class="border-bottom py-2 bg-light">
 
         <!-- Date Range -->
-        <d-col col sm="6" class="d-flex mb-2 mb-sm-0">
+        <d-col col sm="9" lg="8" md="9" class="d-flex mb-2 mb-sm-0">
           <d-input-group size="sm" class="date-range d-flex justify-content-left">
             <d-datepicker v-model="dateRange.from" :highlighted="{ from: dateRange.from, to: dateRange.to || new Date() }" placeholder="Start Date" typeable small />
             <d-datepicker v-model="dateRange.to" :highlighted="{ from: dateRange.from, to: dateRange.to || new Date() }" placeholder="End Date" typeable small />
@@ -22,7 +22,7 @@
         </d-col>
 
         <!-- View Full Report -->
-        <d-col col sm="6">
+        <d-col col sm="4">
           <d-button size="sm" class="d-flex btn-white ml-auto mr-auto ml-sm-auto mr-sm-0 mt-3 mt-sm-0">View Full Report &rarr;</d-button>
         </d-col>
 
@@ -38,13 +38,15 @@
 
 <script>
 import Chart from '../../utils/chart';
+const d = new Date();
 
 const defaultChartData = {
-  labels: Array.from(new Array(30), (_, i) => (i === 0 ? 1 : i)),
+  labels: Array.from(new Array(30), (_, i) => (d.getTime() + 360*(i+1))),
   datasets: [{
-    label: 'Current Month',
+    label: 'Time',
     fill: 'start',
-    data: [500, 800, 320, 180, 240, 320, 230, 650, 590, 1200, 750, 940, 1420, 1200, 960, 1450, 1820, 2800, 2102, 1920, 3920, 3202, 3140, 2800, 3200, 3200, 3400, 2910, 3100, 4250],
+    // data: [500, 800, 320, 180, 240, 320, 230, 650, 590, 1200, 750, 940, 1420, 1200, 960, 1450, 1820, 2800, 2102, 1920, 3920, 3202, 3140, 2800, 3200, 3200, 3400, 2910, 3100, 4250],
+    data: Array.from(new Array(30), (_, i) => (Math.floor(Math.random() * 0.05) + 7.39)),
     backgroundColor: 'rgba(0,123,255,0.1)',
     borderColor: 'rgba(0,123,255,1)',
     pointBackgroundColor: '#ffffff',
@@ -52,19 +54,6 @@ const defaultChartData = {
     borderWidth: 1.5,
     pointRadius: 0,
     pointHoverRadius: 3,
-  }, {
-    label: 'Past Month',
-    fill: 'start',
-    data: [380, 430, 120, 230, 410, 740, 472, 219, 391, 229, 400, 203, 301, 380, 291, 620, 700, 300, 630, 402, 320, 380, 289, 410, 300, 530, 630, 720, 780, 1200],
-    backgroundColor: 'rgba(255,65,105,0.1)',
-    borderColor: 'rgba(255,65,105,1)',
-    pointBackgroundColor: '#ffffff',
-    pointHoverBackgroundColor: 'rgba(255,65,105,1)',
-    borderDash: [3, 3],
-    borderWidth: 1,
-    pointRadius: 0,
-    pointHoverRadius: 2,
-    pointBorderColor: 'rgba(255,65,105,1)',
   }],
 };
 
@@ -73,7 +62,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Graphs',
+      default: 'Blood pH',
     },
     chartData: {
       type: Object,
@@ -108,17 +97,32 @@ export default {
         },
         scales: {
           xAxes: [{
+            type: 'time',
+            time: {
+            // unit: 'hour',
+            displayFormats: {
+              'hour': 'HH:MM:SS',
+            }},
             gridLines: false,
             ticks: {
               callback(tick, index) {
                 // Jump every 7 values on the X axis labels to avoid clutter.
-                return index % 7 !== 0 ? '' : tick;
+                // return index % 7 !== 0 ? '' : tick;
+                return tick;
               },
             },
           }],
           yAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'pH'
+            },
             ticks: {
               suggestedMax: 45,
+              steps: 10,
+              stepValue: 0.1,
+              max: 7.6,
+              min: 7.2,
               callback(tick) {
                 if (tick === 0) {
                   return tick;
@@ -155,6 +159,13 @@ export default {
 
     // Render the chart.
     BlogUsersOverview.render();
+    setInterval(() => {
+      BlogUsersOverview.data.labels.push(BlogUsersOverview.data.labels[BlogUsersOverview.data.labels.length-1]+360);
+      BlogUsersOverview.data.labels.shift()
+      BlogUsersOverview.data.datasets[0].data.push(Math.floor(Math.random() * 0.05) + 7.39);
+      BlogUsersOverview.data.datasets[0].data.shift()
+      BlogUsersOverview.update();
+    },4000);
   },
 };
 </script>

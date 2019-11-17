@@ -20,12 +20,6 @@ export default function () {
       name: 'register-patient',
     },
   }, {
-    title: 'Blog Posts',
-    htmlBefore: '<i class="material-icons">vertical_split</i>',
-    to: {
-      name: 'blog-posts',
-    },
-  }, {
     title: 'Add New Post',
     htmlBefore: '<i class="material-icons">note_add</i>',
     to: {
