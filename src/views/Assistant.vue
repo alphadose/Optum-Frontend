@@ -3,8 +3,8 @@
     <!-- Page Header -->
     <d-row no-gutters class="page-header py-4">
       <d-col col sm="4" class="text-center text-sm-left mb-4 mb-sm-0">
-        <span class="text-uppercase page-subtitle">Overview</span>
-        <h3 class="page-title">Dashboard</h3>
+        <span class="text-uppercase page-subtitle">Your AI Assistant</span>
+        <h3 class="page-title">Suggestion Board</h3>
       </d-col>
     </d-row>
 
@@ -16,35 +16,14 @@
     </d-row>
 
     <d-row>
-      <d-col lg="6" md="6" sm="12" class="mb-4">
-        <bo-heart />
+      <!-- Discussions -->
+      <d-col lg="9" md="12" sm="12" class="mb-4">
+        <bo-discussions @approve="handleApprove" @reject="handleReject" @edit="handleEdit" @view-all-comments="handleViewAllComments" />
       </d-col>
 
-      <d-col lg="6" md="6" sm="12" class="mb-4">
-        <bo-temp />
-      </d-col>
-    </d-row>
-
-    <d-row>
-      <d-col lg="6" md="6" sm="12" class="mb-4">
-        <bo-glucose />
-      </d-col>
-
-      <d-col lg="6" md="6" sm="12" class="mb-4">
-        <bo-blood />
-      </d-col>
-      
-    </d-row>
-
-        <d-row>
-      <!-- Users Overview -->
-      <d-col lg="8" md="6" sm="12" class="mb-4">
-        <bo-overview />
-      </d-col>
-
-      <!-- Users by Device (lite) -->
-      <d-col lg="4" md="6" sm="12" class="mb-4">
-        <bo-users-by-device />
+      <!-- Top Referrals -->
+      <d-col lg="3" md="12" sm="12" class="mb-4">
+        <bo-top-referrals />
       </d-col>
     </d-row>
   </d-container>
@@ -53,11 +32,7 @@
 <script>
 import SmallStats from '@/components/common/SmallStats.vue';
 import TopReferrals from '@/components/common/TopReferrals.vue';
-import GraphHeart from '@/components/blog/GraphHeart.vue';
-import GraphBlood from '@/components/blog/GraphBlood.vue';
-import GraphGlucose from '@/components/blog/GraphGlucose.vue';
-import GraphTemp from '@/components/blog/GraphTemp.vue';
-import Overview from '@/components/blog/UsersOverview.vue';
+import UsersOverview from '@/components/blog/UsersOverview.vue';
 import UsersByDevice from '@/components/blog/UsersByDeviceLite.vue';
 import NewDraft from '@/components/blog/NewDraft.vue';
 import Discussions from '@/components/blog/Discussions.vue';
@@ -65,11 +40,7 @@ import Discussions from '@/components/blog/Discussions.vue';
 export default {
   components: {
     SmallStats,
-    boHeart: GraphHeart,
-    boBlood: GraphBlood,
-    boGlucose: GraphGlucose,
-    boTemp: GraphTemp,
-    boOverview: Overview,
+    boUsersOverview: UsersOverview,
     boUsersByDevice: UsersByDevice,
     boNewDraft: NewDraft,
     boDiscussions: Discussions,
@@ -177,3 +148,4 @@ export default {
   },
 };
 </script>
+

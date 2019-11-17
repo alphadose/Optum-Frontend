@@ -15,20 +15,17 @@
 
 <script>
 const defaultMenuItems = [{
-  title: 'Home',
-  to: '/',
+  title: 'Overview',
+  to: '/home',
 }, {
-  title: 'Services',
-  to: '#',
+  title: 'Registration',
+  to: '/register-patient',
 }, {
-  title: 'About',
-  to: '#',
+  title: 'Assistant',
+  to: '/assistant',
 }, {
-  title: 'Products',
-  to: '#',
-}, {
-  title: 'Blog',
-  to: '#',
+  title: 'User',
+  to: '/user-profile-lite',
 }];
 
 export default {

@@ -13,7 +13,7 @@
       <div class="col">
         <div class="card card-small mb-4">
           <div class="card-header border-bottom">
-            <h6 class="m-0">Active Users</h6>
+            <h6 class="m-0">Active Patients</h6>
           </div>
           <div class="card-body p-0 pb-3 text-center">
             <table class="table mb-0">
@@ -30,21 +30,21 @@
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Ali</td>
-                  <td>Kerry</td>
-                  <td>Russian Federation</td>
-                  <td>Gdańsk</td>
-                  <td>107-0339</td>
+                  <td>Harsh</td>
+                  <td>Dabaria</td>
+                  <td>India</td>
+                  <td>Roorkee</td>
+                  <td>9438440614</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Clark</td>
-                  <td>Angela</td>
-                  <td>Estonia</td>
-                  <td>Borghetto di Vara</td>
-                  <td>1-660-850-1647</td>
+                  <td>Gaurav</td>
+                  <td>Singhal</td>
+                  <td>India</td>
+                  <td>Roorkee</td>
+                  <td>8249009191</td>
                 </tr>
-                <tr>
+                <!-- <tr>
                   <td>3</td>
                   <td>Jerry</td>
                   <td>Nathan</td>
@@ -59,7 +59,7 @@
                   <td>Liberia</td>
                   <td>Bad Hersfeld</td>
                   <td>1-848-473-7416</td>
-                </tr>
+                </tr> -->
               </tbody>
             </table>
           </div>
@@ -68,7 +68,7 @@
     </div>
 
     <!-- Default Dark Table -->
-    <div class="row">
+    <!-- <div class="row">
       <div class="col">
         <div class="card card-small overflow-hidden mb-4">
           <div class="card-header bg-dark">
@@ -124,6 +124,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
