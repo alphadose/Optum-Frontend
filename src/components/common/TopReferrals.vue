@@ -45,30 +45,30 @@
 
 <script>
 const defaultTopReferrals = [{
-  title: 'GitHub',
-  value: '19,291',
+  title: 'Heart Rate',
+  value: '0.826',
 }, {
-  title: 'Stack Overflow',
-  value: '11,201',
+  title: 'Temperature',
+  value: '0.739',
 }, {
-  title: 'Hacker News',
-  value: '9,291',
+  title: 'Glucose',
+  value: '0.691',
 }, {
-  title: 'Reddit',
-  value: '8,281',
+  title: 'Urine output',
+  value: '0.673',
 }, {
-  title: 'The Next Web',
-  value: '7,128',
+  title: 'Albumin',
+  value: '0.524',
 }, {
-  title: 'Tech Crunch',
-  value: '6,218',
+  title: 'Cholesterol',
+  value: '0.513',
 }, {
-  title: 'YouTube',
-  value: '1,218',
+  title: 'Blood pH',
+  value: '0.410',
 }, {
-  title: 'Adobe',
-  value: '1,171',
-},
+  title: 'Lactate',
+  value: '0.385',
+}
 ];
 
 export default {
@@ -79,7 +79,7 @@ export default {
        */
     title: {
       type: String,
-      default: 'Top Referrals',
+      default: 'Top Survivability Correlations',
     },
     /**
        * The referral datasets.

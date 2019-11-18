@@ -4,7 +4,7 @@
     <d-row no-gutters class="page-header py-4">
       <d-col col sm="4" class="text-center text-sm-left mb-4 mb-sm-0">
         <span class="text-uppercase page-subtitle">Your AI Assistant</span>
-        <h3 class="page-title">Suggestion Board</h3>
+        <h3 class="page-title">Suggestion Forum</h3>
       </d-col>
     </d-row>
 
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import SmallStats from '@/components/common/SmallStats.vue';
+import SmallStats from '@/components/common/AssistantStats.vue';
 import TopReferrals from '@/components/common/TopReferrals.vue';
 import UsersOverview from '@/components/blog/UsersOverview.vue';
 import UsersByDevice from '@/components/blog/UsersByDeviceLite.vue';
@@ -56,10 +56,10 @@ export default {
   },
   methods: {
     handleApprove(id) {
-      alert(`Approving discussion id: ${id}`); // eslint-disable-line no-alert
+      this.$swal('Success', `Approved Suggestion ${id}`, 'success');
     },
     handleReject(id) {
-      alert(`Rejecting discussion id: ${id}`); // eslint-disable-line no-alert
+      this.$swal('Success', `Rejected Suggestion ${id}`, 'error');
     },
     handleEdit(id) {
       alert(`Editing discussion id: ${id}`); // eslint-disable-line no-alert
@@ -71,23 +71,23 @@ export default {
   computed: {
     smallStats() {
       return [{
-        label: 'Posts',
-        value: '2,390',
-        percentage: '4.7%',
-        increase: true,
-        labels: ['Label', 'Label', 'Label', 'Label', 'Label', 'Label'],
-        datasets: [{
-          label: 'Today',
-          fill: 'start',
-          borderWidth: 1.5,
-          backgroundColor: 'rgba(0, 184, 216, 0.1)',
-          borderColor: 'rgb(0, 184, 216)',
-          data: [1, 2, 1, 3, 5, 4, 7],
-        }],
+        label: 'Prediction for Harsh',
+        value: 'Death',
+        percentage: '1',
+        increase: false,
+        // labels: ['Label', 'Label', 'Label', 'Label', 'Label', 'Label'],
+        // datasets: [{
+        //   label: 'Today',
+        //   fill: 'start',
+        //   borderWidth: 1.5,
+        //   backgroundColor: 'rgba(0, 184, 216, 0.1)',
+        //   borderColor: 'rgb(0, 184, 216)',
+        //   data: [1, 2, 1, 3, 5, 4, 7],
+        // }],
       }, {
-        label: 'Pages',
-        value: '182',
-        percentage: '12.4',
+        label: 'Confidence Score',
+        value: '0.62',
+        percentage: '0.03',
         increase: true,
         labels: ['Label', 'Label', 'Label', 'Label', 'Label', 'Label'],
         datasets: [{
@@ -99,10 +99,10 @@ export default {
           data: [1, 2, 3, 3, 3, 4, 4],
         }],
       }, {
-        label: 'Comments',
-        value: '8,147',
-        percentage: '3.8%',
-        increase: false,
+        label: 'Suggestions',
+        value: '3',
+        percentage: '50%',
+        increase: true,
         decrease: true,
         labels: ['Label', 'Label', 'Label', 'Label', 'Label', 'Label'],
         datasets: [{
@@ -114,9 +114,9 @@ export default {
           data: [2, 3, 3, 3, 4, 3, 3],
         }],
       }, {
-        label: 'New Customers',
-        value: '29',
-        percentage: '2.71%',
+        label: 'Patients',
+        value: '2',
+        percentage: '75%',
         increase: false,
         decrease: true,
         labels: ['Label', 'Label', 'Label', 'Label', 'Label', 'Label'],
@@ -129,10 +129,10 @@ export default {
           data: [1, 7, 1, 3, 1, 4, 8],
         }],
       }, {
-        label: 'Subscribers',
-        value: '17,281',
-        percentage: '2.4%',
-        increase: false,
+        label: 'Users',
+        value: '2',
+        percentage: '100%',
+        increase: true,
         decrease: true,
         labels: ['Label', 'Label', 'Label', 'Label', 'Label', 'Label'],
         datasets: [{

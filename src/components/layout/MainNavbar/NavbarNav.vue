@@ -15,8 +15,8 @@
             </div>
           </div>
           <div class="notification__content">
-            <span class="notification__category">Analytics</span>
-            <p>Your website’s active users count increased by <span class="text-success text-semibold">28%</span> in the last week. Great job!</p>
+            <span class="notification__category">Suggestion</span>
+            <p>Conduct an albumin blood test to improve prediction on Mr. Harsh Dabaria</p>
           </div>
         </d-dropdown-item>
         <d-dropdown-item href="#">
@@ -26,8 +26,8 @@
             </div>
           </div>
           <div class="notification__content">
-            <span class="notification__category">Sales</span>
-            <p>Last week your store’s sales count decreased by <span class="text-danger text-semibold">5.52%</span>. It could have been worse!</p>
+            <span class="notification__category">Insufficient Data</span>
+            <p>Insufficient data for Mr. Gaurav Singhal. Urine test recommended.</p>
           </div>
         </d-dropdown-item>
         <d-dropdown-item class="notification__all text-center">View all Notifications</d-dropdown-item>

@@ -8,13 +8,6 @@
       </d-col>
     </d-row>
 
-    <!-- Small Stats Blocks -->
-    <d-row>
-      <d-col lg v-for="(stats, idx) in smallStats" :key="idx" class="mb-4">
-        <small-stats :id="`small-stats-${idx}`" variation="1" :chart-data="stats.datasets" :label="stats.label" :value="stats.value" :percentage="stats.percentage" :increase="stats.increase" :decrease="stats.decrease" />
-      </d-col>
-    </d-row>
-
     <d-row>
       <d-col lg="6" md="6" sm="12" class="mb-4">
         <bo-heart />

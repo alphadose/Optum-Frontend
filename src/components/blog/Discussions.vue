@@ -49,7 +49,7 @@
 
         <!-- View All Comments -->
         <d-col class="text-center view-report">
-          <d-button type="submit" class="btn-white" @click="handleClick('view-all-comments')">View All Comments</d-button>
+          <d-button type="submit" class="btn-white" @click="handleClick('view-all-comments')">View All</d-button>
         </d-col>
 
       </d-row>
@@ -62,41 +62,41 @@ const defaultDiscussionsData = [{
   id: 1,
   date: '3 days ago',
   author: {
-    image: require('@/assets/images/avatars/1.jpg'),
-    name: 'John Doe',
+    image: require('@/assets/images/avatars/robo.jpg'),
+    name: 'Argo Bot',
     url: '#',
   },
   post: {
-    title: 'Hello World!',
+    title: 'Harsh Dabaria',
     url: '#',
   },
-  body: 'Well, the way they make shows is, they make one show ...',
+  body: 'The data from an Albumin Blood Test is necessary to improve my prediction on Mr. Harsh Dabaria. The input should be in units of g/dL.',
 }, {
   id: 2,
   date: '4 days ago',
   author: {
-    image: require('@/assets/images/avatars/2.jpg'),
-    name: 'John Doe',
+    image: require('@/assets/images/avatars/robo.jpg'),
+    name: 'Argo Bot',
     url: '#',
   },
   post: {
-    title: 'Hello World!',
+    title: 'Harsh Dabaria',
     url: '#',
   },
-  body: 'After the avalanche, it took us a week to climb out. Now...',
+  body: 'The data from a Urine Output Test is necessary to improve my prediction on Mr. Harsh Dabaria. The input should be in units of mL.',
 }, {
   id: 3,
   date: '5 days ago',
   author: {
-    image: require('@/assets/images/avatars/3.jpg'),
-    name: 'John Doe',
+    image: require('@/assets/images/avatars/robo.jpg'),
+    name: 'Argo Bot',
     url: '#',
   },
   post: {
-    title: 'Hello World!',
+    title: 'Gaurav Singhal',
     url: '#',
   },
-  body: 'My money\'s in that office, right? If she start giving me...',
+  body: 'Insufficient data to make an accurate prediction for Mr. Gaurav Singhal. Conducting Albumin Blood Test and Urine Output Test are recommended.',
 }];
 
 export default {
@@ -107,7 +107,7 @@ export default {
        */
     title: {
       type: String,
-      default: 'Discussions',
+      default: 'Suggestions',
     },
     /**
        * The discussions data.
