@@ -96,7 +96,7 @@ const defaultDiscussionsData = [{
     title: 'Gaurav Singhal',
     url: '#',
   },
-  body: 'Insufficient data to make an accurate prediction for Mr. Gaurav Singhal. Conducting Albumin Blood Test and Urine Output Test are recommended.',
+  body: 'The data from a Urine Output Test is necessary to improve my prediction on Mr. Gaurav Singhal. The input should be in units of mL.',
 }];
 
 export default {
